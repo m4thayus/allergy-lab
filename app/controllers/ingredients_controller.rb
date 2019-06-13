@@ -14,7 +14,7 @@ end
 
 def create
     @ingredient = Ingredient.new(
-        ingredient_params(:name)
+        ingredient_params(:name, :recipe_ids)
     )
     if @ingredient.valid?
         @ingredient.save

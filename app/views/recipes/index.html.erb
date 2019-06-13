@@ -1,9 +1,12 @@
 <h1>Recipes#index</h1>
 <% @recipes.each do |recipe| %>
+<div>
     <h2><%= recipe.name %></h2>
     <ul>
         <% recipe.ingredients.each do |ingredient| %>
             <li><%= link_to ingredient.name, ingredient %></li>
+            <p>2</p>
         <% end %>
     </ul>
+</div>
 <% end %>

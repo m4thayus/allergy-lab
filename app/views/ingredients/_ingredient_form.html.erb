@@ -1,0 +1,7 @@
+<%= form_for @ingredient do |f| %>
+    <%= f.label :name, "Ingredient Name:" %>
+    <%= f.text_field :name %>
+    <%= f.label :recipe_ids %>
+    <%= f.collection_select(:recipe_ids, Recipe.all, :id, :name, prompt: "For what recipe?") %>
+    <%= f.submit %>
+<% end %>
