@@ -14,11 +14,11 @@ end
 
 def create
     @recipe = Recipe.new(
-        recipe_params(:name)
+        recipe_params(:name, :user_id)
     )
     if @recipe.valid?
         @recipe.save
-        redirect_to @recipe
+        redirect_to recipes_path
     else
         render :new
     end
